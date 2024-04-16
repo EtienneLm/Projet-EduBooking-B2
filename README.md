@@ -4,4 +4,4 @@
 
 *Lenny OLAX Bargain, Etienne Lemée*
 
-**PHP, Laravel, MySQL, PHPMailer **
+**PHP, Laravel, MySQL, PHPMailer**
