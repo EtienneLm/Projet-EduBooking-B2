@@ -12,11 +12,9 @@
         <a href="{{ url('/') }}">
             <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home" class="home-button-img">
         </a>
-        <!-- Make sure to point to the correct route for registration or login -->
-        <a href="{{ route('login') }}" class="nav-link button">login</a> <!-- Updated to point to registration -->
+        <a href="{{ route('login') }}" class="nav-link button">Login</a> 
     </header>
 
-    <h1>Hello World</h1>
     <div class="container">
         <div class="card">
             <h2>Je suis étudiant</h2>
@@ -24,7 +22,7 @@
                 <p>Bienvenue, étudiant!</p>
                 <p>Choisissez cette option si vous êtes un étudiant inscrit.</p>
             </div>
-            <a href="{{ url('test') }}">Continuer en tant qu'étudiant</a>
+            <a href="{{ url('student_teacher_choice') }}">Continuer en tant qu'étudiant</a>
         </div>
         <div class="card">
             <h2>Je suis enseignant</h2>
@@ -32,7 +30,7 @@
                 <p>Bienvenue, enseignant!</p>
                 <p>Choisissez cette option si vous êtes un enseignant.</p>
             </div>
-            <a href="{{ url('en_rende.html') }}">Continuer en tant qu'enseignant</a> <!-- Verify the route -->
+            <a href="{{ url('teacher_page') }}">Continuer en tant qu'enseignant</a>
         </div>
     </div>
 </body>

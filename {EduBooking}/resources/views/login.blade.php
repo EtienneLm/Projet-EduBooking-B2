@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<link rel="stylesheet" href="{{ asset('header.css') }}">
+<title>Login page</title>
+
+
+<header>
+    <a href="{{ url('/') }}">
+        <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home" class="home-button-img">
+    </a>
+    <a href="{{ route('login') }}" class="nav-link button">Login</a> 
+</header>
+
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

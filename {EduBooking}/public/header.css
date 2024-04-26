@@ -6,6 +6,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 90%; /* Ensure the header fills the width */
 }
 
 .nav-link {
@@ -32,4 +33,20 @@ header {
 .home-button-img {
     height: 40px; /* Adjust the size as needed */
     cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-link {
+        margin: 10px 0; /* More space around links on smaller screens */
+    }
+
+    .home-button-img {
+        height: 30px; /* Smaller image on smaller screens */
+    }
 }
