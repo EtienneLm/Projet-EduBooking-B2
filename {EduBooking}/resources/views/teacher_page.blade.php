@@ -38,25 +38,15 @@
 
         <button type="submit">Submit</button>
     </form>
-
-    <h3> --------------------------------------------------------- </h3>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        <p> hello {{ $users }}</p>
-    </table>
     
-
     <h3> --------------------------------------------------------- </h3>
 
-    {{-- <!-- <h1>Select a User</h1>
+    <h1>Select a User</h1>
     <form action="/your-submission-route" method="POST">
         @csrf
         <label for="user">Choose a user:</label>
-        {{-- Temporary debug to display the users data --}}
-        @dump($users)
+        {{-- Temporary debug to display the users data
+        @dump($users) --}}
 
         <select name="user_id" id="user">
             @foreach($users as $user)
@@ -64,9 +54,6 @@
             @endforeach
         </select>
         <button type="submit">Submit</button>
-    </form> -->
-
-    --}}
-        
+    </form>
 </body>
 </html>
