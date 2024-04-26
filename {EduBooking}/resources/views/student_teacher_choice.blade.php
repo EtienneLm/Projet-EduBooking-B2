@@ -14,6 +14,8 @@
         </a>
         <a href="{{ route('login') }}" class="nav-link button">Login</a> 
     </header>
+
+    <a href="{{ route('home') }}">&larr; Return</a>
    
     <div class="whole_page">
         <div class="container">

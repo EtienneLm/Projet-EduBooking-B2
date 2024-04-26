@@ -15,6 +15,8 @@
         <a href="{{ route('login') }}" class="nav-link button">Login</a> 
     </header>
 
+    <a href="{{ route('home') }}">&larr; Return</a>
+
     <form action="{{ route('add_teacher') }}" method="POST">
     @csrf
         <label for="name">Name:</label>
