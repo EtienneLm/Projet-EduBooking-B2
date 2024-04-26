@@ -6,7 +6,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AllTeacherController;
-use App\Http\Controllers\TeacherFormHandlingController; 
+use App\Http\Controllers\TeacherFormHandlingController;
+use App\Http\Controllers\ChosenTeacherController;
 
 Route::get('/', function () {
     return view('main');
@@ -32,7 +33,9 @@ Route::get('/teacher_page', [UserController::class, 'showAllUsers'])->name('teac
 
 Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('student_teacher_choice');
 
-Route::post('/teacher-submit-form', [TeacherFormHandlingController::class, 'handleForm'])->name('teacher-submit-form');
+Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher');
+Route::get('/student_appointment_choice', [ChosenTeacherController::class, 'displaySelectedTeacher'])->name('student_appointment_choice');
+
 
 // Authentication routes
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');

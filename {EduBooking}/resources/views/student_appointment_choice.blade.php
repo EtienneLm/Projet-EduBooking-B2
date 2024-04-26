@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('header.css') }}">
-    <!-- <link rel="stylesheet" href="{{ asset('app.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('appointment_choice.css') }}">
     <title>Appointment Choice</title>
 </head>
 <body>
@@ -15,8 +15,13 @@
         <a href="{{ route('login') }}" class="nav-link button">Login</a> 
     </header>
    
+    <h1>Selected Teacher Details</h1>
+    @if(isset($teacher))
+        <p>Name: {{ $teacher->name }}</p>
+        <p>Email: {{ $teacher->email }}</p>
+    @else
+        <p>No teacher selected.</p>
+    @endif
 
-    <h1> hello world</h1>
-    
 </body>
 </html>

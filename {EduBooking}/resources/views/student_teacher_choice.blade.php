@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('header.css') }}">
-    <!-- <link rel="stylesheet" href="{{ asset('app.css') }}"> -->
+    <link rel="stylesheet" href="{{ asset('teacher_choice.css') }}">
     <title>Teacher choice</title>
 </head>
 <body>
@@ -15,18 +15,21 @@
         <a href="{{ route('login') }}" class="nav-link button">Login</a> 
     </header>
    
-
-    <h1>Select a Teacher</h1>
-    <form action="{{ route('teacher-submit-form') }}" method="POST"> {{-- {{ route('student_appointment_choice') }} --}}
-        @csrf
-        <label for="user">Choose a teacher:</label>
-        <select name="user_id" id="user">
-            @foreach ($teachers as $teacher)
-                <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
-            @endforeach
-        </select>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="whole_page">
+        <div class="container">
+            <h2>You are a student, please select a teacher:</h2>
+            <form action="{{ route('submit-teacher') }}" method="POST">
+            @csrf
+                <label for="user" class="label">Choose a teacher:</label>
+                <select name="user_id" id="user" class="select-dropdown">
+                    @foreach ($teachers as $teacher)
+                        <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
+                    @endforeach
+                </select>
+                <button type="submit" class="submit_button">Submit</button>
+            </form>
+        </div>
+    </div>
 
     
 </body>
