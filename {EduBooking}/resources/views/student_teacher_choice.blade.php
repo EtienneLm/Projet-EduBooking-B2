@@ -17,7 +17,7 @@
    
 
     <h1>Select a Teacher</h1>
-    <form action="{{ route('student_appointment_choice') }}" method="POST"> {{-- {{ route('student_appointment_choice') }} --}}
+    <form action="{{ route('teacher-submit-form') }}" method="POST"> {{-- {{ route('student_appointment_choice') }} --}}
         @csrf
         <label for="user">Choose a teacher:</label>
         <select name="user_id" id="user">
