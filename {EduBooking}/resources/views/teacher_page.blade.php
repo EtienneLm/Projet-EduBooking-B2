@@ -41,19 +41,19 @@
     
     <h3> --------------------------------------------------------- </h3>
 
+     
     <h1>Select a User</h1>
-    <form action="/your-submission-route" method="POST">
+    <form action="/tochange" method="POST">
         @csrf
         <label for="user">Choose a user:</label>
-        {{-- Temporary debug to display the users data
-        @dump($users) --}}
-
         <select name="user_id" id="user">
-            @foreach($users as $user)
+            @foreach ($users as $user)
                 <option value="{{ $user->id }}">{{ $user->name }}</option>
             @endforeach
         </select>
         <button type="submit">Submit</button>
     </form>
+
+    
 </body>
 </html>

@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AllTeacherController;
 
 Route::get('/', function () {
     return view('main');
@@ -24,6 +25,7 @@ Route::post('/add-teacher', [TeacherController::class, 'store'])->name('add_teac
 
 Route::get('/teacher_page', [UserController::class, 'showAllUsers'])->name('teacher_page');
 
+Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('student_teacher_choice');
 
 
 // Authentication routes

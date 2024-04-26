@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('header.css') }}">
     <!-- <link rel="stylesheet" href="{{ asset('app.css') }}"> -->
-    <title>Teacher choice</title>
+    <title>Appointment Choice</title>
 </head>
 <body>
     <header>
@@ -16,17 +16,6 @@
     </header>
    
 
-    <h1>Select a Teacher</h1>
-    <form action="{{ route('student_appointment_choice') }}" method="POST"> {{-- {{ route('student_appointment_choice') }} --}}
-        @csrf
-        <label for="user">Choose a teacher:</label>
-        <select name="user_id" id="user">
-            @foreach ($teachers as $teacher)
-                <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
-            @endforeach
-        </select>
-        <button type="submit">Submit</button>
-    </form>
 
     
 </body>
