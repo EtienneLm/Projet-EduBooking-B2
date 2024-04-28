@@ -25,16 +25,17 @@ The platform aims to minimize administrative overhead and maximize interaction t
 
 ## Features
 
-- **User Authentication:** Secure login and registration system for teachers and students.
-- **Appointment Booking:** Students can choose their teacher, view their availability and book slots accordingly.
-- **Dashboard:** Customized dashboards for students and teachers to manage appointments.
-- **Email notification:** An email is automaticaly sent to remind you of the date and time of your appointment
+- [X] **User Authentication:** Secure login and registration system for teachers and students.
+- [X] **Appointment Booking:** Students can choose their teacher, view their availability and book slots accordingly.
+- [X] **Dashboard:** Customized dashboards for students and teachers to manage appointments.
+- [ ] **Email notification:** An email is automaticaly sent to remind you of the date and time of your appointment
 
 ## Technology Stack
 
-- **Back-end Framework:** [Laravel](https://laravel.com/)
-- **Programming Languages:** PHP, HTML (Blade templates), CSS
-- **Database:** SQLite
+|   **Back-end Framework:** 🛠️ | [Laravel](https://laravel.com/) |                        |     |
+|:-------------------------|:-------------------------------:|:----------------------:|:---:|
+| **Programming Languages:** ✍🏻 |               PHP               | HTML (Blade templates) | CSS |
+|        **Database:** 📦      |              SQLite             |                        |     |
 
 ## Getting Started
 
