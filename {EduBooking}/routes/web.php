@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AllTeacherController;
 use App\Http\Controllers\TeacherFormHandlingController;
 use App\Http\Controllers\ChosenTeacherController;
+use App\Http\Controllers\CreateAppointmentController;
 
 Route::get('/', function () {
     return view('main');
@@ -25,6 +26,11 @@ Route::get('/student_appointment_choice', function () {
     return view('student_appointment_choice');
 })->name('student_appointment_choice');
 
+Route::get('/create_appointment', function () {
+    return view('create_appointment');
+})->name('create_appointment');
+
+
 Route::redirect('/main', '/');
 
 Route::post('/add-teacher', [TeacherController::class, 'store'])->name('add_teacher');
@@ -34,7 +40,10 @@ Route::get('/teacher_page', [UserController::class, 'showAllUsers'])->name('teac
 Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('student_teacher_choice');
 
 Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher');
+
 Route::get('/student_appointment_choice', [ChosenTeacherController::class, 'displaySelectedTeacher'])->name('student_appointment_choice');
+
+Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->name('store_appointment');
 
 
 // Authentication routes

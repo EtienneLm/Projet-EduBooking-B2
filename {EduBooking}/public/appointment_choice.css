@@ -33,7 +33,7 @@ body {
     color: #ffffff;
   }
   td:not(.empty) {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* block bg color*/
     cursor: pointer;
   }
   td:not(.empty):hover {
@@ -41,4 +41,21 @@ body {
   }
   .nav {
     cursor: pointer;
+  }
+
+  .time-slots {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .time-slot {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .time-slot:hover {
+    background-color: #e2e6ea;
   }
