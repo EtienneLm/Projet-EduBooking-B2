@@ -14,30 +14,27 @@
         <a href="{{ route('login') }}" class="nav-link button">Login</a>
     </header>
 
-    <a href="{{ route('student_appointment_choice') }}">&larr; Return</a>
-    
-    @if(isset($teacher))
-        <h2>You chose {{ $teacher->name }}</h2>
-        <p>The 23 avril - 15h40</p>
-    @else
-        <p>No teacher selected.</p>
-    @endif
-
-    <h2>Enter all the informations to create your appointment:</h2>
-
     <form action="{{ route('store_appointment') }}" method="POST">
-        @csrf
+    @csrf
         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
-        <input type="hidden" name="subject_id" value="1"> 
 
-        <label for="day">Day:</label>
+        <label for="subject_id">Subject:</label>
+        <select id="subject_id" name="subject_id" required>
+            @foreach ($subjects as $subject)
+                <option value="{{ $subject->id }}">{{ $subject->name }}</option>
+            @endforeach
+        </select>
+
+        <label for="appointment_day">Day:</label>
         <input type="date" id="appointment_day" name="appointment_day" required>
 
-        <label for="comment">Comment:</label>
+        <label for="user_comment">Comment:</label>
         <input type="text" id="user_comment" name="user_comment" required>
 
         <button type="submit">Submit</button>
     </form>
+
+
 
 </body>
 </html>

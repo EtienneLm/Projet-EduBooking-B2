@@ -43,7 +43,17 @@
     
     <h3> --------------------------------------------------------- </h3>
 
-     
+    <h1>Add New Subject</h1>
+    <form action="{{ route('add_subject') }}" method="POST">
+        @csrf
+        <label for="subject_name">Subject Name:</label>
+        <input type="text" id="subject_name" name="name" required>
+
+        <button type="submit">Add Subject</button>
+    </form>
+
+    <h3> --------------------------------------------------------- </h3>
+
     <h1>Select a User</h1>
     <form action="/tochange" method="POST">
         @csrf

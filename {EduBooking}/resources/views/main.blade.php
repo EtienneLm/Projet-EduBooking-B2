@@ -12,7 +12,12 @@
         <a href="{{ url('/') }}">
             <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home" class="home-button-img">
         </a>
-        <a href="{{ route('login') }}" class="nav-link button">Login</a> 
+        @if(auth()->check())
+            <a href="{{ route('logout') }}" class="nav-link button">Logout</a>
+            <span>Welcome, {{ auth()->user()->name }}!</span>
+        @else
+            <a href="{{ route('login') }}" class="nav-link button">Login</a> 
+        @endif
     </header>
 
     <div class="container">
