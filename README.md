@@ -60,4 +60,4 @@ php artisan serve
 
 - **Project Start Date:** April 16, 2024
 - **Expected Completion:** April 30, 2024
-- **Total Sessions:** 7
+- **Total Class Sessions:** 7
