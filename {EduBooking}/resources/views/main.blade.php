@@ -13,6 +13,7 @@
             <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home" class="home-button-img">
         </a>
         <a href="{{ route('login') }}" class="nav-link button">Login</a> 
+        <a href="{{ route('register') }}" class="nav-link button">Register</a>
     </header>
 
     <div class="container">

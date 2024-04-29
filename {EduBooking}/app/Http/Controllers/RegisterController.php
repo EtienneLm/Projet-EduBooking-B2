@@ -6,12 +6,13 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth; // Ajout de l'import pour la classe Auth
 
 class RegisterController extends Controller
 {
     public function showRegistrationForm()
     {
-        return view('TOCHANGE');
+        return view('register');
     }
 
     public function register(Request $request)
