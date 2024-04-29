@@ -14,4 +14,9 @@ class Appointment extends Model
     {
         return $this->belongsToMany(User::class, 'appointment_user');
     }
+
+    public function teacher()
+    {
+        return $this->belongsTo(User::class, 'teacher_user_id');
+    }
 }

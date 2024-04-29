@@ -11,34 +11,34 @@ use App\Models\Appointment;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
-
+    
     /**
-     * The attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
+    * The attributes that are mass assignable.
+    *
+    * @var array<int, string>
+    */
     protected $fillable = [
         'name',
         'email',
         'password',
         'user_type',
     ];
-
+    
     /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array<int, string>
-     */
+    * The attributes that should be hidden for serialization.
+    *
+    * @var array<int, string>
+    */
     protected $hidden = [
         'password',
         'remember_token',
     ];
-
+    
     /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
+    * Get the attributes that should be cast.
+    *
+    * @return array<string, string>
+    */
     protected function casts(): array
     {
         return [
@@ -46,11 +46,21 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
-
+    
     
     public function appointments()
     {
         return $this->belongsToMany(Appointment::class, 'appointment_user');
+        
+    }
     
+    public function teacher()
+    {
+        return $this->belongsTo(User::class, 'teacher_user_id');
+    }
+    
+    public function students()
+    {
+        return $this->hasMany(User::class, 'teacher_user_id');
     }
 }

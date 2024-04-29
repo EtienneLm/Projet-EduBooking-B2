@@ -28,13 +28,23 @@
         <label for="appointment_day">Day:</label>
         <input type="date" id="appointment_day" name="appointment_day" required>
 
+        <script>                                                            
+            const input = document.getElementById('appointment_day');      
+            input.addEventListener('input', function (e) {
+                const day = new Date(this.value).getDay();                  // disable weekends
+                if (day === 0 || day === 6) {
+                    alert("Weekends are not selectable.");
+                    this.value = ''; 
+                }                                                       
+            });
+        </script>                                                           
+
+
         <label for="user_comment">Comment:</label>
         <input type="text" id="user_comment" name="user_comment" required>
 
-        <button type="submit">Submit</button>
+        <button href="{{ route('login') }}" type="submit">Submit</button>
     </form>
-
-
 
 </body>
 </html>
