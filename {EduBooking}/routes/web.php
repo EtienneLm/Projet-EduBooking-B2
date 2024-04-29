@@ -45,6 +45,10 @@ Route::get('/student_appointment_choice', [ChosenTeacherController::class, 'disp
 
 Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->middleware('auth')->name('store_appointment');
 
+Route::get('/teacher_page', [TeacherController::class, 'showTeacherPage'])->name('teacher_page')->middleware('auth'); // to list all of the appointments of a teacher
+
+Route::post('/delete-appointment', [TeacherController::class, 'deleteAppointment'])->name('delete_appointment'); // to delete an appointment
+
 // Authentication routes
 Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('login', [LoginController::class, 'login']);

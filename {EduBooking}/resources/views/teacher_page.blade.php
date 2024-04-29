@@ -19,10 +19,25 @@
 
 
     <h1>Here are all of your appointments : </h1>
+    <form action="{{ route('delete_appointment') }}" method="POST">
+    @csrf
+        <select name="appointment_id" id="appointment">
+        @forelse ($appointments as $appointment)
+            <option value="{{ $appointment->id }}">
+                {{ $appointment->appointment_day }} - {{ $appointment->user->name }} - {{ $appointment->user_comment }}
+            </option>
+        @empty
+            <option>No appointments available.</option>
+        @endforelse
+        </select>
+        <button type="submit" class="btn btn-danger">Delete Selected Appointment</button>
+    </form>
+
+
 
 
     <h3> --------------------------------------------------------- </h3>
-
+{{--
     <form action="{{ route('add_teacher') }}" method="POST">
     @csrf
         <label for="name">Name:</label>
@@ -71,7 +86,7 @@
         </select>
         <button type="submit">Submit</button>
     </form>
-
+    --}}
     
 </body>
 </html>
