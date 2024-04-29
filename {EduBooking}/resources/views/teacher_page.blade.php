@@ -17,6 +17,12 @@
 
     <a href="{{ route('home') }}">&larr; Return</a>
 
+
+    <h1>Here are all of your appointments : </h1>
+
+
+    <h3> --------------------------------------------------------- </h3>
+
     <form action="{{ route('add_teacher') }}" method="POST">
     @csrf
         <label for="name">Name:</label>
