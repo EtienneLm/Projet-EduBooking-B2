@@ -17,6 +17,7 @@
     <form action="{{ route('store_appointment') }}" method="POST">
     @csrf
         <input type="hidden" name="user_id" value="{{ auth()->user()->id }}">
+        <input type="hidden" name="teacher_user_id" value="{{ $teacherId }}">
 
         <label for="subject_id">Subject:</label>
         <select id="subject_id" name="subject_id" required>
