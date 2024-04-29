@@ -19,7 +19,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentification réussie, rediriger l'utilisateur
-            return redirect()->intended('/home');
+            return redirect()->intended('/');
         } else {
             // Authentification échouée, rediriger avec un message d'erreur
             return redirect()->back()->withErrors(['email' => 'Email ou mot de passe incorrect.'])->withInput();
@@ -30,6 +30,6 @@ class LoginController extends Controller
     {
         Auth::logout();
 
-        return redirect('/');
+        return redirect('/home');
     }
 }

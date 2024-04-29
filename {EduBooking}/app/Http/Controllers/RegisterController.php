@@ -32,6 +32,6 @@ class RegisterController extends Controller
         // Authentifier l'utilisateur après son inscription
         Auth::login($user);
 
-        return redirect()->intended('/home');
+        return redirect('/');
     }
 }
