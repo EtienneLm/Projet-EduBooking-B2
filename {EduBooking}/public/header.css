@@ -17,13 +17,26 @@ header {
     font-family: Arial, sans-serif;
 }
 
-.button {
+.login-button {
     padding: 8px 15px;
     background-color: #007bff; /* Bootstrap blue */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    position: absolute;
+    right: 250px;
+}
+
+.register-button {
+    padding: 8px 15px;
+    background-color: #007bff; /* Bootstrap blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    right: 150px;
 }
 
 .button:hover {

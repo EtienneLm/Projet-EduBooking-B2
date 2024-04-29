@@ -11,6 +11,7 @@ body {
     position: absolute;
     height: 50vh;
     width: 60vw;
+    right: 300px;
 }
 
 .card {
