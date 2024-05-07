@@ -14,7 +14,7 @@ EduBooking is an innovative online appointment scheduling platform designed to f
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
-- [Project Wireframe and DB Shema](#project-wireframe-and-db-shema)
+- [Project Wireframe and DB Schema](#project-wireframe-and-db-schema)
 - [Contributors](#contributors)
 - [Timeline](#timeline)
 
@@ -50,7 +50,7 @@ php artisan migrate
 php artisan serve
 ```
 
-## Project Wireframe and DB Shema
+## Project Wireframe and DB Schema
 
 #### Overview
 
