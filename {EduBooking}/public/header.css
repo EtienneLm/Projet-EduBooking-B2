@@ -6,20 +6,24 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%; /* Ensure the header fills the width */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .nav-link {
     text-decoration: none;
     margin: 0 15px;
     font-size: 16px;
-    color: #007bff; /* Bootstrap blue for example */
+    color: #007bff;
     font-family: Arial, sans-serif;
 }
 
 .button {
     padding: 8px 15px;
-    background-color: #007bff; /* Bootstrap blue */
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -31,22 +35,19 @@ header {
 }
 
 .home-button-img {
-    height: 40px; /* Adjust the size as needed */
+    height: 40px;
     cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .header {
+    header {
         flex-direction: column;
         padding: 20px;
     }
-
     .nav-link {
-        margin: 10px 0; /* More space around links on smaller screens */
+        margin: 10px 0;
     }
-
     .home-button-img {
-        height: 30px; /* Smaller image on smaller screens */
+        height: 30px;
     }
 }
