@@ -13,6 +13,9 @@
         </a>
         <a href="{{ route('login') }}" class="nav-link button">Login</a>
     </header>
+    <br>
+    <br>
+    <br>
 
     <form action="{{ route('store_appointment') }}" method="POST">
     @csrf
@@ -29,7 +32,7 @@
         <label for="appointment_day">Day:</label>
         <input type="date" id="appointment_day" name="appointment_day" required>
 
-        <script>                                                            
+        <script>       /*                                                     
             const input = document.getElementById('appointment_day');      
             input.addEventListener('input', function (e) {
                 const day = new Date(this.value).getDay();                  // disable weekends
@@ -37,7 +40,9 @@
                     alert("Weekends are not selectable.");
                     this.value = ''; 
                 }                                                       
-            });
+            });*/
+            alert("toto1");
+
         </script>                                                           
 
 
