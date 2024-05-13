@@ -32,7 +32,7 @@
     </header>
 
 
-
+ 
 
     <a href="{{ route('home') }}">&larr; Return</a>
 
