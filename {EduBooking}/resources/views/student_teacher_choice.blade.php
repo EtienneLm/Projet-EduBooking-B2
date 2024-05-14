@@ -31,24 +31,27 @@
         </div>
     </header>
 
-    <a href="{{ route('home') }}">&larr; Return</a>
+    <br>
+    <br>
+    <br>
+    
+    <a class="return-btn-box" href="{{ url('/') }}">
+        <i class="arrow left"></i>
+    </a>
    
     <div class="whole_page">
-        <div class="container">
-            <h2>You are a student, please select a teacher:</h2>
-            <form action="{{ route('submit-teacher') }}" method="POST">
-            @csrf
-                <label for="user" class="label">Choose a teacher:</label>
-                <select name="user_id" id="user" class="select-dropdown">
-                    @foreach ($teachers as $teacher)
-                        <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
-                    @endforeach
-                </select>
-                <button type="submit" class="submit_button">Submit</button>
-            </form>
-        </div>
+        <h1>You are a student, please select a teacher:</h1>
+        <form action="{{ route('submit-teacher') }}" method="POST">
+        @csrf
+            <label for="user" class="label">Choose a teacher:</label>
+            <select name="user_id" id="user" class="select-dropdown">
+                @foreach ($teachers as $teacher)
+                    <option value="{{ $teacher->id }}">{{ $teacher->name }}</option>
+                @endforeach
+            </select>
+            <button type="submit" class="submit_button">Submit</button>
+        </form>
     </div>
 
-    
 </body>
 </html>

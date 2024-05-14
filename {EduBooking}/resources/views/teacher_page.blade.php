@@ -31,27 +31,30 @@
         </div>
     </header>
 
+    <br>
+    <br>
+    <br>
 
- 
+    <a class="return-btn-box" href="{{ url('/') }}">
+        <i class="arrow left"></i>
+    </a>
 
-    <a href="{{ route('home') }}">&larr; Return</a>
-
-
-    <h1>Here are all of your appointments : </h1>
-    <form class="appointment-form" action="{{ route('delete_appointment') }}" method="POST">
-    @csrf
-        <select name="appointment_id" id="appointment">
-        @forelse ($appointments as $appointment)
-            <option value="{{ $appointment->id }}">
-                {{ $appointment->appointment_day }} - {{ $appointment->user->name }} - {{ $appointment->user_comment }}
-            </option>
-        @empty
-            <option>No appointments available.</option>
-        @endforelse
-        </select>
-        <button type="submit" class="btn btn-danger">Delete Selected Appointment</button>
-    </form>
-
+    <div class="whole-page">
+        <h1>Here are all of your appointments : </h1>
+        <form class="appointment-form" action="{{ route('delete_appointment') }}" method="POST">
+        @csrf
+            <select name="appointment_id" id="appointment" class="select-appointments">
+            @forelse ($appointments as $appointment)
+                <option value="{{ $appointment->id }}">
+                    {{ $appointment->appointment_day }} - {{ $appointment->user->name }} - {{ $appointment->user_comment }}
+                </option>
+            @empty
+                <option>No appointments available.</option>
+            @endforelse
+            </select>
+            <button type="submit" class="delete-btn">Delete Selected Appointment</button>
+        </form>
+    </div>
 
 {{--
     <form action="{{ route('add_teacher') }}" method="POST">

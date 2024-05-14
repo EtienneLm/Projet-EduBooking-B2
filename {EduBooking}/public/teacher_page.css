@@ -1,50 +1,94 @@
-body, html {
+/* Basic HTML Body settings */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    padding-top: 6vh; 
-    height: 100%;
-    font-family: Arial, sans-serif;
-    color: #000000;
-    background-color: #f4f4f4;
-    font-size: calc(0.625rem + 1vmin);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    background-color: #f5f5f5;
+    display: block; 
 }
 
-h1 {
-    margin: 1.25rem 0;
+/* Style for the main content wrapper */
+.whole-page {
+    position: relative;
+    width: 80%; 
+    max-width: 40rem;
+    margin: 20px auto; 
+}
+
+/* Heading styles, applicable to h1 as well in teacher_page */
+h1, h2 {
     color: #333;
-    font-size: calc(1.25rem + 0.5vmin); 
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.appointment-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%; 
-    max-width: none;    
-}
-
-select, .btn {
+/* Style for forms and form elements */
+.select-appointments, .delete-btn {
     width: 100%;
     padding: 0.625rem; 
     font-size: calc(0.75rem + 0.5vmin); 
     border-radius: 0.3125rem;
-}
-
-select {
     border: 0.0625rem solid #ccc;
     margin-bottom: 1rem;
+    background-color: white; /* Adjust if different from student_teacher_choice.css */
 }
 
-.btn {
-    background-color: #d9534f;
-    border: none;
+.select-appointments:hover {
+    background-color: #e1f5fe;
+}
+
+.select-appointments:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.delete-btn {
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
     color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
-.btn:hover {
-    background-color: #c9302c;
+.delete-btn:hover {
+    background-color: #2a84e4; /* Slight change to match the hover effect in student_teacher_choice.css */
+}
+
+/* Style for the return button */
+.return-btn-box {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #0056b3;
+    display: flex;
+    position: relative;
+    top: 5vh;
+    left: 2vw;
+}
+
+.arrow {
+    width: 0.7rem;
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0;
+    display: inline-block;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.return-btn-box .arrow {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.return-btn-box:hover {
+    background-color: #2a84e4;
 }

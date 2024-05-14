@@ -12,8 +12,10 @@
 
 @section('content')
 <body>
-    <img src="{{ asset('Image/logo_Edubooking-removebg-preview.png') }}" alt="EduBooking Logo" class="logo-img" aria-label="EduBooking Logo">
-
+    <a href="{{ url('/') }}">
+            <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home button as a logo image" class="home-button-img">
+    </a>
+    
     <div class="container" aria-label="Registration Form Container">
         <div class="card">
             <div class="card-body">
@@ -64,6 +66,9 @@
                     <button type="submit" class="btn btn-primary" aria-label="Register Button">Register</button>
                 </form>
             </div>
+        </div>
+        <div class="login-link">
+            Already have an account? <a href="{{ route('login') }}" aria-label="Login Link">Login !</a>
         </div>
     </div>
 </body>

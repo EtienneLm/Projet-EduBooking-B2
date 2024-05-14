@@ -65,7 +65,7 @@
 
 
         <label for="user_comment">Comment:</label>
-        <input type="text" id="user_comment" name="user_comment" required>
+        <input type="text" id="user_comment" name="user_comment" maxlength="20" required>
 
         <button href="{{ route('login') }}" type="submit">Submit</button>
     </form>
