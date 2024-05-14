@@ -1,4 +1,3 @@
-/* Basic HTML Body settings */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -7,7 +6,6 @@ body {
     display: block; 
 }
 
-/* Style for the main content wrapper */
 .whole-page {
     position: relative;
     width: 80%; 
@@ -15,22 +13,20 @@ body {
     margin: 20px auto; 
 }
 
-/* Heading styles, applicable to h1 as well in teacher_page */
 h1, h2 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-/* Style for forms and form elements */
 .select-appointments, .delete-btn {
     width: 100%;
     padding: 0.625rem; 
     font-size: calc(0.75rem + 0.5vmin); 
-    border-radius: 0.3125rem;
+    border-radius: 0.6vh;
     border: 0.0625rem solid #ccc;
     margin-bottom: 1rem;
-    background-color: white; /* Adjust if different from student_teacher_choice.css */
+    background-color: white;
 }
 
 .select-appointments:hover {
@@ -51,15 +47,15 @@ h1, h2 {
     color: white;
     background-color: #0056b3;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.6vh;
     cursor: pointer;
 }
 
 .delete-btn:hover {
-    background-color: #2a84e4; /* Slight change to match the hover effect in student_teacher_choice.css */
+    background-color: #2a84e4;
 }
 
-/* Style for the return button */
+
 .return-btn-box {
     height: 3rem;
     width: 3rem;
@@ -91,4 +87,12 @@ h1, h2 {
 
 .return-btn-box:hover {
     background-color: #2a84e4;
+}
+
+
+.deletion-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
 }

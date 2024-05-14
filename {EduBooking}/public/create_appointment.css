@@ -3,14 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-    display: block; 
+    display: block;
 }
 
-.whole_page {
+.whole-page {
     position: relative;
-    width: 80%; 
+    width: 80%;
     max-width: 40rem;
-    margin: 20px auto; 
+    margin: 20px auto;
 }
 
 h1 {
@@ -23,64 +23,48 @@ h1 {
     display: block;
     margin-bottom: 8px;
     color: #0056b3;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.select-dropdown {
-    /* width: 100%;
-    padding: 12px 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border: 2px solid #0056b3;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #0056b3;
-    appearance: none;*/
-    /* background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2212%22%20height%3D%228%22%20viewBox%3D%220%200%2012%208%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M10.293%200.29303L6%204.58603L1.707%200.29303L0.293%201.70703L6%7.41403L11.707%1.70703L10.293%200.29303Z%22%20fill%3D%22%230056B3%22%3E%3C/path%3E%3C/svg%3E');
-    background-repeat: no-repeat;
-    background-position: right 10px center;  */
+.select-dropdown,
+.submit_btn,
+input[type="text"],
+input[type="date"] {
     width: 100%;
-    padding: 0.625rem; 
-    font-size: calc(0.75rem + 0.5vmin); 
+    padding: 0.75rem;
+    font-size: 1rem;
     border-radius: 0.6vh;
     border: 0.0625rem solid #ccc;
     margin-bottom: 1rem;
+    box-sizing: border-box;
     background-color: white;
-
 }
 
-
-.select-dropdown:hover {
+.select-dropdown:hover,
+input[type="text"]:hover,
+input[type="date"]:hover {
     background-color: #e1f5fe;
 }
 
-.select-dropdown:focus {
+.select-dropdown:focus,
+input[type="text"]:focus,
+input[type="date"]:focus {
     border-color: #0056b3;
     outline: none;
 }
 
-.submit_button {
+.submit_btn {
     margin-top: 20px;
     display: block;
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
     color: white;
     background-color: #0056b3;
     border: none;
-    border-radius: 0.6vh;
     cursor: pointer;
 }
 
-.button:hover {
-    background-color: #0056b3;
+.submit_btn:hover {
+    background-color: #004494;
 }
-
-
-
-
-/* return button  */
 
 .return-btn-box {
     height: 3rem;
@@ -88,10 +72,7 @@ h1 {
     border-radius: 50%;
     background-color: #0056b3;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     position: relative;
-
     top: 5vh;
     left: 2vw;
 }
@@ -102,7 +83,6 @@ h1 {
     border: solid white;
     border-width: 0 0.2rem 0.2rem 0;
     display: inline-block;
-    /* padding: ; */
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
@@ -117,4 +97,48 @@ h1 {
 
 .return-btn-box:hover {
     background-color: #2a84e4;
+}
+
+.center-content span {
+    font-size: 1rem;
+}
+
+::placeholder {
+    color: #5f5f5f;
+}
+
+.creation-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .whole-page {
+        width: 90%;
+    }
+
+    .label,
+    .select-dropdown,
+    .submit_btn,
+    input[type="text"],
+    input[type="date"] {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whole-page {
+        width: 95%;
+    }
+
+    .label,
+    .select-dropdown,
+    .submit_btn,
+    input[type="text"],
+    input[type="date"] {
+        font-size: 0.75rem;
+    }
 }

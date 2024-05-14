@@ -39,22 +39,43 @@
         <i class="arrow left"></i>
     </a>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteBtn = document.querySelector('.delete-btn');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'deletion-message';
+            messageDiv.textContent = 'Appointment deleted';
+            deleteBtn.closest('form').addEventListener('submit', function(event) {
+                // Optionally, you could prevent default to handle the submission via AJAX and only display this on success.
+                // event.preventDefault();
+                document.body.appendChild(messageDiv);
+                messageDiv.style.display = 'block'; // Show the message
+                setTimeout(() => {
+                    messageDiv.style.display = 'none'; // Hide the message after 10 seconds
+                }, 1000);
+            });
+        });
+    </script>
+
+
     <div class="whole-page">
-        <h1>Here are all of your appointments : </h1>
+        <h1>Here are all of your appointments:</h1>
+        <div class="deletion-message"></div> <!-- Place for the deletion message -->
         <form class="appointment-form" action="{{ route('delete_appointment') }}" method="POST">
-        @csrf
+            @csrf
             <select name="appointment_id" id="appointment" class="select-appointments">
-            @forelse ($appointments as $appointment)
-                <option value="{{ $appointment->id }}">
-                    {{ $appointment->appointment_day }} - {{ $appointment->user->name }} - {{ $appointment->user_comment }}
-                </option>
-            @empty
-                <option>No appointments available.</option>
-            @endforelse
+                @forelse ($appointments as $appointment)
+                    <option value="{{ $appointment->id }}">
+                        {{ $appointment->appointment_day }} - {{ $appointment->user->name }} - {{ $appointment->user_comment }}
+                    </option>
+                @empty
+                    <option>No appointments available.</option>
+                @endforelse
             </select>
             <button type="submit" class="delete-btn">Delete Selected Appointment</button>
         </form>
     </div>
+
 
 {{--
     <form action="{{ route('add_teacher') }}" method="POST">

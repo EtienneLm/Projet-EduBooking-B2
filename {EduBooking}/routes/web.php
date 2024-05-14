@@ -23,9 +23,9 @@ Route::get('/teacher_page', function () {
     return view('teacher_page');
 })->name('teacher_page');
 
-Route::get('/student_appointment_choice', function () {
-    return view('student_appointment_choice');
-})->name('student_appointment_choice');
+// Route::get('/student_appointment_choice', function () {
+//     return view('student_appointment_choice');
+// })->name('student_appointment_choice');
 
 Route::get('/create_appointment', [CreateAppointmentController::class, 'showCreateAppointmentForm'])->middleware('auth')->name('create_appointment');
 
@@ -41,7 +41,7 @@ Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeacher
 
 Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher');
 
-Route::get('/student_appointment_choice', [ChosenTeacherController::class, 'displaySelectedTeacher'])->name('student_appointment_choice');
+// Route::get('/student_appointment_choice', [ChosenTeacherController::class, 'displaySelectedTeacher'])->name('student_appointment_choice');
 
 Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->middleware('auth')->name('store_appointment');
 
