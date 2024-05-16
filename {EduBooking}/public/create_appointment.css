@@ -19,6 +19,12 @@ h1 {
     margin-bottom: 20px;
 }
 
+h2 {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .label {
     display: block;
     margin-bottom: 8px;

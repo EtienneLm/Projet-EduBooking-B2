@@ -75,7 +75,7 @@
             <button type="submit" class="delete-btn">Delete Selected Appointment</button>
         </form>
     </div>
-
+    
 
 {{--
     <form action="{{ route('add_teacher') }}" method="POST">

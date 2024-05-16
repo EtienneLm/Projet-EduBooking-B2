@@ -92,10 +92,14 @@
             </script>  
 
             <label class="label" for="user_comment">Comment:</label>
-            <input type="text" id="user_comment" name="user_comment" class="select-dropdown" maxlength="20" placeholder="I have bad grades" required>
+            <input type="text" id="user_comment" name="user_comment" class="select-dropdown" maxlength="30" placeholder="I have bad grades" required>
 
-            <button type="submit" class="submit_btn">Submit</button>
-        </form>
+            <button type="submit" class="submit_btn" href="{{ url('/appointment_created') }}">Submit</button>
+        </form> 
+
+        @if ($userAppointmentsCount >= 3)
+            <h2>Max amount of appointments: 3</h2>
+        @endif
     </div>
 
 </body>

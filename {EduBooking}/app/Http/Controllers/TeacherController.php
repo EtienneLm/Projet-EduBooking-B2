@@ -31,35 +31,33 @@ class TeacherController extends Controller
         
         return redirect()->route('teacher_page');
     }
-
+    
     public function showTeacherPage()
     {
         $teacherId = auth()->id(); 
         $appointments = \App\Models\Appointment::with('user') 
-                            ->where('teacher_user_id', $teacherId)
-                            ->get();
-
+        ->where('teacher_user_id', $teacherId)
+        ->get();
+        
         return view('teacher_page', compact('appointments'));
     }
-
+    
     public function deleteAppointment(Request $request)
     {
         $appointmentId = $request->appointment_id;
         $appointment = \App\Models\Appointment::findOrFail($appointmentId);
         $appointment->delete();
-
+        
         return redirect()->back()->with('success', 'Appointment deleted successfully.');
     }
-
-//     public function showTeacherPage()
-// {
-//     // Assuming the teacher ID is retrieved from authenticated user or a session variable
-//     $teacherId = auth()->id(); // or any other method to get the currently logged in teacher ID
-
-//     $appointments = Appointment::where('teacher_user_id', $teacherId)->get();
-
-//     return view('teacher_page', compact('appointments'));
-// }
-
+        
+    // public function showAppointments()
+    // {
+    //     $studentId = auth()->id(); 
+    //     $appointments = \App\Models\Appointment::with('user') 
+    //     ->where('user_id', $studentId)
+    //     ->get();
+    //     return view('teacher_page', compact('appointments'));
+    // }
     
 }
