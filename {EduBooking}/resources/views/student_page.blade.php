@@ -63,7 +63,7 @@
             <select name="appointment_id" id="appointment" class="select-appointments">
                 @forelse ($appointments as $appointment)
                     <option value="{{ $appointment->id }}">
-                        {{ $appointment->appointment_day }} - {{ $appointment->user_comment }} - Teacher ID: {{ $appointment->teacher_user_id }}
+                    Date: {{ $appointment->appointment_day }} - Teacher: {{ $appointment->teacher->name }} - Comment: {{ $appointment->user_comment }} 
                     </option>
                 @empty
                     <option>No appointments available.</option>
