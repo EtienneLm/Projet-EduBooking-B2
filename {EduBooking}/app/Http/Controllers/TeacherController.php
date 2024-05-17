@@ -36,11 +36,11 @@ class TeacherController extends Controller
     {
         $teacherId = auth()->id(); 
         $appointments = \App\Models\Appointment::with('user') 
-        ->where('teacher_user_id', $teacherId)
-        ->get();
+        ->where('teacher_user_id', $teacherId)                          
+        ->get();                                            
         
         return view('teacher_page', compact('appointments'));
-    }
+    }   
     
     public function deleteAppointment(Request $request)
     {
@@ -59,5 +59,6 @@ class TeacherController extends Controller
     //     ->get();
     //     return view('teacher_page', compact('appointments'));
     // }
+
     
 }

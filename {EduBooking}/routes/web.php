@@ -7,7 +7,6 @@ use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AllTeacherController;
 use App\Http\Controllers\TeacherFormHandlingController;
-use App\Http\Controllers\ChosenTeacherController;
 use App\Http\Controllers\CreateAppointmentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\StudentController;
@@ -20,9 +19,13 @@ Route::get('/teacher_page', function () {
     return view('teacher_page');
 })->name('teacher_page');
 
-Route::get('/appointment-created', function () {
+Route::get('/appointment_created', function () {
     return view('appointment_created');
 })->name('appointment_created');
+
+
+Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher'); //
+
 
 Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('all_teachers');
 
@@ -30,7 +33,6 @@ Route::get('/create_appointment', [CreateAppointmentController::class, 'showCrea
 
 Route::redirect('/main', '/');
 
-Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher');
 
 Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->middleware('auth')->name('store_appointment');
 
@@ -39,6 +41,10 @@ Route::post('/delete-appointment', [TeacherController::class, 'deleteAppointment
 
 
 Route::get('/appointments', [AppointmentController::class, 'showAppointments'])->name('appointments.show')->middleware('auth');
+
+
+Route::get('/student_page', [StudentController::class, 'showStudentPage'])->name('student_page')->middleware('auth');
+Route::post('/delete-appointment', [StudentController::class, 'deleteAppointment'])->name('delete_appointment');
 
 
 // Authentication routes

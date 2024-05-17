@@ -13,13 +13,19 @@ body {
     margin: 20px auto; 
 }
 
-h1, h2 {
+h1 {
     color: #333;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.select-appointments, .delete-btn {
+h3 {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.select-appointments {
     width: 100%;
     padding: 0.625rem; 
     font-size: calc(0.75rem + 0.5vmin); 
@@ -38,10 +44,35 @@ h1, h2 {
     outline: none;
 }
 
-.delete-btn {
+.go-create-btn {
+    text-decoration: none; 
+    text-align: center;
     margin-top: 20px;
     display: block;
     width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.go-create-btn:hover {
+    background-color: #2a84e4;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+.delete-btn {
+    margin-top: 20px;
+    display: block;
+    width: 50%; 
     padding: 10px;
     font-size: 1rem;
     color: white;
@@ -54,7 +85,6 @@ h1, h2 {
 .delete-btn:hover {
     background-color: #f55a5a;
 }
-
 
 .return-btn-box {
     height: 3rem;
@@ -88,7 +118,6 @@ h1, h2 {
 .return-btn-box:hover {
     background-color: #2a84e4;
 }
-
 
 .deletion-message {
     color: red;

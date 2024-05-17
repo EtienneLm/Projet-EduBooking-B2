@@ -38,7 +38,7 @@
                 <p>Bienvenue, étudiant!</p>
                 <p>Choisissez cette option si vous êtes un étudiant inscrit.</p>
             </div>
-            <a href="{{ url('student_teacher_choice') }}">Continuer en tant qu'étudiant</a>
+            <a href="{{ url('student_page') }}">Continuer en tant qu'étudiant</a>
         </div>
         <div class="card">
             <h2>Je suis enseignant</h2>

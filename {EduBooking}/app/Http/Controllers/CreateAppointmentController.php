@@ -23,9 +23,8 @@ class CreateAppointmentController extends Controller
         ]);
         
         $user = Auth::user();
-        
+    
         $userAppointmentsCount = Appointment::where('user_id', $user->id)->count();
-        
         if ($userAppointmentsCount >= 3) {
             return redirect()->back()->with('error', 'You have reached the maximum limit of appointments.');
         }

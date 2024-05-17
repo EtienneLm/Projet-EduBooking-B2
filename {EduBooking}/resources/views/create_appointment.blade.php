@@ -61,13 +61,20 @@
             <script>
                 const input = document.getElementById('appointment_day');
                 input.addEventListener('input', function (e) {
-                    const day = new Date(this.value).getDay();
+                    const selectedDate = new Date(this.value);
+                    const currentDate = new Date();
+                    if (selectedDate < currentDate) {
+                        alert("Please select a date after today.");
+                        this.value = ''; // to clear 
+                    }
+                    const day = selectedDate.getDay();
                     if (day === 0 || day === 6) {
                         alert("Weekends are not selectable.");
-                        this.value = '';
+                        this.value = ''; 
                     }
                 });
             </script>
+
 
             <script>
                 document.addEventListener('DOMContentLoaded', function () {

@@ -35,7 +35,7 @@
     <br>
     <br>
     
-    <a class="return-btn-box" href="{{ url('/') }}">
+    <a class="return-btn-box" href="{{ url('/student_page') }}">
         <i class="arrow left"></i>
     </a>
    
