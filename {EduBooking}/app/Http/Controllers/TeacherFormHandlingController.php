@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User; 
+use App\Models\User;
 
 class TeacherFormHandlingController extends Controller
 {
@@ -12,11 +12,9 @@ class TeacherFormHandlingController extends Controller
         $request->validate([
             'user_id' => 'required|exists:users,id',
         ]);
-        
-        session(['selected_teacher_id' => $request->user_id]);
-        
-        return redirect()->route('create_appointment');
-    }
-    
-}
 
+        session(['selected_teacher_id' => $request->user_id]);
+
+        return redirect()->route('student_create_appointment');
+    }
+}

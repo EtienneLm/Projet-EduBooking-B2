@@ -12,6 +12,12 @@ header {
     height: 5vh; 
 }
 
+body {
+    font-family: Arial, sans-serif;
+    color: #000000;
+    font-size: calc(10px + 1vmin);
+}
+
 .home-button-img {
     height: 5vh; 
     cursor: pointer;
@@ -54,14 +60,14 @@ header {
         padding: 1rem;
         align-items: center; 
     }
-
+    
     .home-button-img, .center-content, .auth-link {
         width: 100%;
         text-align: center;
         justify-content: center;
         margin-top: 0.5rem;
     }
-
+    
     .auth-link {
         order: 2; 
     }

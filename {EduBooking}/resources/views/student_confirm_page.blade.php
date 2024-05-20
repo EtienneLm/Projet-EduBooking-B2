@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment Created</title>
     <link rel="stylesheet" href="{{ asset('header.css') }}">
-    <link rel="stylesheet" href="{{ asset('appointment_created.css') }}">
+    <link rel="stylesheet" href="{{ asset('student_confirm_page.css') }}">
 </head>
 <body>
     <header>
@@ -37,7 +37,7 @@
     <br>
     <br>
 
-    <a class="return-btn-box" href="{{ url('/create_appointment') }}">
+    <a class="return-btn-box" href="{{ url('/student_create_appointment') }}">
         <i class="arrow left"></i>
     </a>
 

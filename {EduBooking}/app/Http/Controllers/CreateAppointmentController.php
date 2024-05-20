@@ -42,7 +42,7 @@ class CreateAppointmentController extends Controller
             return redirect()->back()->with('error', 'Failed to create the appointment.');
         }
         
-        return redirect()->route('appointment_created')->with('success', 'Appointment created successfully!');
+        return redirect()->route('student_confirm_page')->with('success', 'Appointment created successfully!');
     }
 
     public function showCreateAppointmentForm()
@@ -53,7 +53,7 @@ class CreateAppointmentController extends Controller
     $user = Auth::user();
     $userAppointmentsCount = Appointment::where('user_id', $user->id)->count();
     
-    return view('create_appointment', [
+    return view('student_create_appointment', [
         'subjects' => $subjects,
         'teacherId' => $teacherId,
         'userAppointmentsCount' => $userAppointmentsCount,

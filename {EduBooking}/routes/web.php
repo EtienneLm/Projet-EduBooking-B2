@@ -19,22 +19,22 @@ Route::get('/teacher_page', function () {
     return view('teacher_page');
 })->name('teacher_page');
 
-Route::get('/appointment_created', function () {
-    return view('appointment_created');
-})->name('appointment_created');
+Route::get('/student_confirm_page', function () {
+    return view('student_confirm_page');
+})->name('student_confirm_page');
 
 
-Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher'); //
+Route::post('/submit-teacher', [TeacherFormHandlingController::class, 'handleForm'])->name('submit-teacher'); 
 
 
-Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('all_teachers');
+Route::get('/student_teacher_choice', [AllTeacherController::class, 'showTeachers'])->name('all_teachers'); // TO DO
 
-Route::get('/create_appointment', [CreateAppointmentController::class, 'showCreateAppointmentForm'])->middleware('auth')->name('create_appointment');
+
+Route::get('/student_create_appointment', [CreateAppointmentController::class, 'showCreateAppointmentForm'])->middleware('auth')->name('student_create_appointment');
+Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->middleware('auth')->name('store_appointment');
+
 
 Route::redirect('/main', '/');
-
-
-Route::post('/store-appointment', [CreateAppointmentController::class, 'storeAppointment'])->middleware('auth')->name('store_appointment');
 
 Route::get('/teacher_page', [TeacherController::class, 'showTeacherPage'])->name('teacher_page')->middleware('auth');
 Route::post('/delete-appointment', [TeacherController::class, 'deleteAppointment'])->name('delete_appointment');

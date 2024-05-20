@@ -14,7 +14,7 @@ class AppointmentController extends Controller
         $userId = auth()->id(); 
         $appointments = Appointment::where('user_id', $userId)->get(); 
         
-        return view('appointment_created', compact('appointments')); 
+        return view('student_confirm_page', compact('appointments')); 
     }
 }
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Appointment</title>
     <link rel="stylesheet" href="{{ asset('header.css') }}">
-    <link rel="stylesheet" href="{{ asset('create_appointment.css') }}">
+    <link rel="stylesheet" href="{{ asset('student_create_appointment.css') }}">
 </head>
 <body>
     <header>
@@ -101,7 +101,7 @@
             <label class="label" for="user_comment">Comment:</label>
             <input type="text" id="user_comment" name="user_comment" class="select-dropdown" maxlength="30" placeholder="I have bad grades" required>
 
-            <button type="submit" class="submit_btn" href="{{ url('/appointment_created') }}">Submit</button>
+            <button type="submit" class="submit_btn" href="{{ url('/student_confirm_page') }}">Submit</button>
         </form> 
 
         @if ($userAppointmentsCount >= 3)

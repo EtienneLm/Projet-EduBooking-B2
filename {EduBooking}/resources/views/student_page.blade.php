@@ -79,10 +79,9 @@
         </div>
 
 
-        @if ($userAppointmentsCount >= 5)
+        @if ($userAppointmentsCount >= 3)
         <h3>Max amount of appointments</h3>
         @endif
     </div>
-    
 </body>
 </html>
