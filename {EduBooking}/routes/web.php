@@ -10,6 +10,8 @@ use App\Http\Controllers\TeacherFormHandlingController;
 use App\Http\Controllers\CreateAppointmentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\NotificationController;
+
 
 Route::get('/', function () {
     return view('main');
@@ -45,6 +47,9 @@ Route::get('/appointments', [AppointmentController::class, 'showAppointments'])-
 
 Route::get('/student_page', [StudentController::class, 'showStudentPage'])->name('student_page')->middleware('auth');
 Route::post('/delete-appointment', [StudentController::class, 'deleteAppointment'])->name('delete_appointment');
+
+
+Route::get('/notifications', [NotificationController::class, 'show'])->name('notifications');
 
 
 // Authentication routes

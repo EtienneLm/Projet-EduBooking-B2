@@ -54,6 +54,33 @@ body {
     background-color: #0056b3;
 }
 
+.notification-bell {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem; 
+}
+
+.bell-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    color: black;
+    cursor: pointer;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
