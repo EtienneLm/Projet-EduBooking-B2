@@ -10,6 +10,10 @@ body, html {
     font-size: calc(0.625vw + 0.625vh + 0.5vmin);
 }
 
+h2 {
+    color: #333333;
+}
+
 .home-button-img {
     height: 18vh; 
     cursor: pointer;
@@ -76,11 +80,38 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     font-size: 0.85rem;
 }
 
+.form-group-radio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-group-radio div {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+.form-group-radio label {
+    margin-right: 0.5rem;
+    margin-top: 0.6rem;
+
+}
+
 @media (max-width: 36rem) {
     .card-body {
         padding: 1rem;
     }
     .btn-primary {
         padding: 0.625rem;
+    }
+
+    .form-group-radio {
+        flex-direction: column;
+    }
+
+    .form-group-radio div {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
     }
 }

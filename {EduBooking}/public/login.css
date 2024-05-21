@@ -12,6 +12,10 @@ body, html {
     font-size: calc(10px + 1vmin);
 }
 
+h2 {
+    color: #333333;
+}
+
 .home-button-img {
     height: 18vh; 
     cursor: pointer;

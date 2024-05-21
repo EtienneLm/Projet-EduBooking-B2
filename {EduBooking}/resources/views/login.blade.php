@@ -15,6 +15,7 @@
     <a href="{{ url('/') }}">
         <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home button as a logo image" class="home-button-img">
     </a>
+    
     <h2 class="login-text" aria-label="Login text">Login</h2>
 
     <div class="container" aria-label="Login Form Container">
