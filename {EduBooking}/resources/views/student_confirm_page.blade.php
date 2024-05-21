@@ -41,7 +41,15 @@
         <i class="arrow left"></i>
     </a>
 
+    <div class="whole_page">
+        <div class="confirm-message">
+            <h1>Appointment created !</h1>
+            <h2>So you don't forget it, an email will be sent the day before</h2>
+        </div>
 
+        <a class="appointments_btn" href="{{ url('/student_page') }}">My appointments</a>
+    </div>
+    
     {{-- <h1>Your Appointments</h1>
     <form>
         <label for="appointments">Select an Appointment:</label>

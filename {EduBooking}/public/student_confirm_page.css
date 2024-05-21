@@ -6,18 +6,43 @@ body {
     display: block;
 }
 
-.whole-page {
+.whole_page {
     position: relative;
-    width: 80%;
+    width: 80%; 
     max-width: 40rem;
-    margin: 20px auto;
+    margin: 20px auto; 
 }
 
 h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+    color: #0056b3;
 }
+
+h2 {
+    color: #333333;
+}
+
+.confirm-message {
+    text-align: center;
+}
+
+.appointments_btn {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.appointments_btn:hover {
+    background-color: #004494;
+}
+
 
 .return-btn-box {
     height: 3rem;

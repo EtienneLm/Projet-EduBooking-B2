@@ -33,20 +33,20 @@
 
     <div class="container">
         <div class="card">
-            <h2>Je suis étudiant</h2>
+            <h2>I'm a student</h2>
             <div class="card-content">
-                <p>Bienvenue, étudiant!</p>
-                <p>Choisissez cette option si vous êtes un étudiant inscrit.</p>
+                <!-- <p>Welcome !</p> -->
+                <p>Choose this option to take appointments with your teachers on different subjects</p>
             </div>
-            <a href="{{ url('student_page') }}">Continuer en tant qu'étudiant</a>
+            <a href="{{ url('student_page') }}">Continue as a student</a>
         </div>
         <div class="card">
-            <h2>Je suis enseignant</h2>
+            <h2>I'm a teacher</h2>
             <div class="card-content">
-                <p>Bienvenue, enseignant!</p>
-                <p>Choisissez cette option si vous êtes un enseignant.</p>
+                <!-- <p>Welcome !</p> -->
+                <p>Choose this option to see all the upcoming appointments you have with your students</p>
             </div>
-            <a href="{{ url('teacher_page') }}">Continuer en tant qu'enseignant</a>
+            <a href="{{ url('teacher_page') }}">Continue as a teacher</a>
         </div>
     </div>
 </body>
