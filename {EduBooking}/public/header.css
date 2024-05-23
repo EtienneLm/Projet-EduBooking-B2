@@ -1,6 +1,6 @@
 header {
     background-color: #ffffff;
-    padding: 0.625rem 1.25rem;
+    padding: 1.5rem 1.25rem; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,12 +10,14 @@ header {
     left: 0;
     z-index: 1000;
     height: 5vh; 
+    box-sizing: border-box; 
 }
 
 body {
     font-family: Arial, sans-serif;
     color: #000000;
     font-size: calc(10px + 1vmin);
+    margin: 0; 
 }
 
 .home-button-img {
@@ -86,6 +88,7 @@ body {
         flex-direction: column;
         padding: 1rem;
         align-items: center; 
+        height: auto; 
     }
     
     .home-button-img, .center-content, .auth-link {
