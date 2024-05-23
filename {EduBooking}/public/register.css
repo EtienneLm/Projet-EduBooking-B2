@@ -65,6 +65,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s;
+    font-size: large;
 }
 
 .btn-primary:hover {
@@ -95,10 +96,12 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 .form-group-radio label {
     margin-right: 0.5rem;
     margin-top: 0.6rem;
-
 }
 
-@media (max-width: 36rem) {
+
+@media (max-width: 900px) {
+
+    
     .card-body {
         padding: 1rem;
     }

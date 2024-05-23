@@ -77,6 +77,8 @@ input[type="email"]:focus, input[type="password"]:focus {
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s;
+    font-size: large;
+
 }
 
 .btn-primary:hover {
@@ -109,6 +111,14 @@ input[type="email"]:focus, input[type="password"]:focus {
 
 
 @media (max-width: 36rem) {
+    .home-button-img {
+        height: 5vh; 
+        cursor: pointer;
+        position: absolute;
+        left: 10vw;
+        top: 10vh; 
+    }
+
     .login-text, .card-body {
         padding: 1rem;
     }

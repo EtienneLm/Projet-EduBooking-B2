@@ -83,22 +83,23 @@ body {
     font-size: 0.75rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header {
-        flex-direction: column;
-        padding: 1rem;
-        align-items: center; 
+        flex-direction: row; 
+        padding: 0.5rem; 
         height: auto; 
+        align-items: center; 
+        justify-content: center; 
     }
     
     .home-button-img, .center-content, .auth-link {
-        width: 100%;
+        width: auto; 
         text-align: center;
         justify-content: center;
-        margin-top: 0.5rem;
+        margin: 0 1rem; 
     }
     
     .auth-link {
-        order: 2; 
+        order: 3; 
     }
 }
