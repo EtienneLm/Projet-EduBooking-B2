@@ -12,8 +12,13 @@
 
 @section('content')
 <body>
-    <img src="{{ asset('Image/logo_Edubooking-removebg-preview.png') }}" alt="EduBooking Logo" class="logo-img" aria-label="EduBooking Logo">
+    <a href="{{ url('/') }}">
+            <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home button as a logo image" class="home-button-img">
+    </a>
 
+    <h2 class="login-text" aria-label="Login text">Register</h2>
+
+    
     <div class="container" aria-label="Registration Form Container">
         <div class="card">
             <div class="card-body">
@@ -46,24 +51,30 @@
                             </span>
                         @enderror
                     </div>
+
+
                     <div class="form-group">
-                        <label for="password-confirm">Confirm Password</label>
-                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" placeholder="bLoqH8uiK!2" required autocomplete="new-password" aria-label="Confirm Password Input">
+                        <p>User Type</p>
+                        <div class="form-group-radio">
+                            <div>
+                                <label for="student">Student: </label>
+                                <input type="radio" id="student" name="user_type" value="1" required>
+                            </div>
+                            <div>
+                                <label for="teacher">Teacher: </label>
+                                <input type="radio" id="teacher" name="user_type" value="2" required>
+                            </div>
+                        </div>
                     </div>
 
-                    <label>User Type:</label>
-                    <div>
-                        <input type="radio" id="student" name="user_type" value="1" required>
-                        <label for="student">Student</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="teacher" name="user_type" value="2" required>
-                        <label for="teacher">Teacher</label>
-                    </div>
 
                     <button type="submit" class="btn btn-primary" aria-label="Register Button">Register</button>
                 </form>
             </div>
+        </div>
+
+        <div class="login-link">
+            Already have an account? <a href="{{ route('login') }}" aria-label="Login Link">Login !</a>
         </div>
     </div>
 </body>

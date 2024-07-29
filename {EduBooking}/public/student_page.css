@@ -1,0 +1,127 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: block; 
+}
+
+.whole-page {
+    position: relative;
+    width: 80%; 
+    max-width: 40rem;
+    margin: 20px auto; 
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.select-appointments {
+    width: 100%;
+    padding: 0.625rem; 
+    font-size: calc(0.75rem + 0.5vmin); 
+    border-radius: 0.6vh;
+    border: 0.0625rem solid #ccc;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.select-appointments:hover {
+    background-color: #e1f5fe;
+}
+
+.select-appointments:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.go-create-btn {
+    text-decoration: none; 
+    text-align: center;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0056b3;
+    border: none;
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.go-create-btn:hover {
+    background-color: #2a84e4;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+}
+
+.delete-btn {
+    margin-top: 20px;
+    display: block;
+    width: 50%; 
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #de3131;
+    border: none;
+    border-radius: 0.6vh;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #f55a5a;
+}
+
+.return-btn-box {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    background-color: #0056b3;
+    display: flex;
+    position: relative;
+    top: 5vh;
+    left: 2vw;
+}
+
+.arrow {
+    width: 0.7rem;
+    height: 0.7rem;
+    border: solid white;
+    border-width: 0 0.2rem 0.2rem 0;
+    display: inline-block;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.return-btn-box .arrow {
+    position: absolute;
+    top: 50%;
+    left: 53%;
+    transform: translate(-50%, -50%) rotate(135deg);
+    -webkit-transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.return-btn-box:hover {
+    background-color: #2a84e4;
+}
+
+.deletion-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    display: none;
+}

@@ -55,11 +55,11 @@
         <script>                                                            
             const input = document.getElementById('appointment_day');      
             input.addEventListener('input', function (e) {
-                const day = new Date(this.value).getDay();                  //  disable weekends
-                if (day === 0 || day === 6) {                               // * * :
-                    alert("Weekends are not selectable.");                  // ? :
-                    this.value = '';                                        // ! :
-                }                                                           // TODO :
+                const day = new Date(this.value).getDay();                  // disable weekends
+                if (day === 0 || day === 6) {
+                    alert("Weekends are not selectable.");
+                    this.value = ''; 
+                }                                                       
             });
         </script>                                                           
 
@@ -69,5 +69,6 @@
 
         <button href="{{ route('login') }}" type="submit">Submit</button>
     </form>
+
 </body>
 </html>
