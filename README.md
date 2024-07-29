@@ -70,7 +70,7 @@ Here is the wireframe that outlines the design and structure of our application.
 
 ## Contributors
 
-- **Etienne Lemée** - Project Manager and Creator, Fullstack Developer, Project Organisation, Database Management, Documentation.
+- **Etienne Lemée** - Project Manager and Creator, Fullstack Developer. Project Organisation, Database Management, Documentation, Web hosting.
 - **Lenny Olax-Bargain** - Frontend Developer.
 - **Anas Rayk** - Frontend Developer.
 
