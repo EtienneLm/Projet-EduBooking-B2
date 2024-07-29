@@ -1,16 +1,158 @@
-body, html {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/Image/fond2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: Arial, sans-serif;
     color: #000000;
-    /* background-color: #24217d; */
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: calc(10px + 1vmin);
 }
+
+/* .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 960px;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    margin-top: 60px;
+} */
+
+/* .card {
+    /* flex: 1 1 280px;
+    margin: 1rem;
+    padding: 20px; */
+
+/* border-radius: 0.6vh;
+    background-color: #ffffff;
+    border: solid rgb(198, 198, 198);
+    border-width: 0.1vh; */
+
+/* text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+} */
+
+/* h2 {
+    color: #0056b3;
+    font-size: 1.5em;
+} */
+
+/** button */
+.card a {
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 2rem;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #333;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        flex-basis: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* typing text  */
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+
+wrapper.four {
+    background-color: #9ba5b4;
+    font-size: 3rem;
+    font-family: "Play", sans-serif;
+}
+
+.four .type {
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+
+.four h3 {
+    width: 11ch;
+    font-size: 4rem;
+    border-right: 4px solid black;
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(13, end), blink-caret 0.5s step-end infinite alternate;
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/*? old code to keep :
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/Image/fond2.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(10px + 1vmin);
+}
+
+.content {
+    text-align: center;
+    z-index: 1; 
+    position: relative;
+} 
 
 .container {
     display: flex;
@@ -25,36 +167,36 @@ body, html {
     margin-top: 60px;
 }
 
-.card {
-    flex: 1 1 280px;
+ .card {
+     flex: 1 1 280px;
     margin: 1rem;
-    padding: 20px;
+    padding: 20px; 
 
-    border-radius: 0.6vh;
+     border-radius: 0.6vh;
     background-color: #ffffff;
     border: solid rgb(198, 198, 198);
-    border-width: 0.1vh;
+    border-width: 0.1vh; 
 
-    text-align: center;
+     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-}
+    justify-content: space-between; 
+} 
 
-h2 {
+ h2 {
     color: #0056b3;
     font-size: 1.5em;
-}
+} 
 
 .card-content {
     margin: 20px 0;
-}
+} 
 
-.card-content p {
+ .card-content p {
     line-height: 1.6;
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px; 
     height: 10vh;
-}
+} 
 
 .card a {
     background-color: #0056b3;
@@ -75,6 +217,7 @@ h2 {
         flex-direction: column;
         align-items: center;
     }
+
     .card {
         flex-basis: 90%;
     }
@@ -85,3 +228,4 @@ h2 {
         font-size: 14px;
     }
 }
+*\
