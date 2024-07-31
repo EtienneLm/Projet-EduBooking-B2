@@ -11,14 +11,9 @@
 
 <body>
     @include('header')
-    <div class="typing_text four">
-        <div class="type">
-            <h3 class="typing">EduBooking</h3>
-        </div>
-    </div>
 
     <div class="footer">
-        <p class="book-appointments-txt">Book appointments in less than 2 minutes !</p>
+        <p class="book-appointments-txt">Book appointments in 2 minutes !</p>
 
         <div class="btn-container">
             <div class="continue-btn">
