@@ -2,14 +2,17 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <header>
-    <a href="{{ url('/') }}">
+    <!-- <a href="{{ url('/') }}">
         <img src="{{ asset('image/logo_Edubooking-removebg-preview.png') }}" alt="Home button as a logo image" class="home-button-img">
-    </a>
+    </a> -->
+
+
+
     <div class="center-content">
         @if(auth()->check())
-            <span>Welcome, {{ auth()->user()->name }}!</span>
+        <span>Welcome, {{ auth()->user()->name }}!</span>
         @else
-            <span>&nbsp;</span>
+        <span>&nbsp;</span>
         @endif
     </div>
 
@@ -22,14 +25,21 @@
         </a>
     </div>
 
-    <div class="auth-link">
+    <div class="auth-btn">
         @if(auth()->check())
-            <form action="{{ route('logout') }}" method="POST">
-                @csrf
-                <button type="submit" class="nav-link button">Logout</button>
-            </form>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="nav-link button">
+                <img src="{{ asset('Image/account-icon.png') }}" alt="Account Icon" class="auth-icon">
+            </button>
+        </form>
+
         @else
-            <a href="{{ route('login') }}" class="nav-link button">Login</a>
+        <a href="{{ route('login') }}" class="nav-link button">
+            <img src="{{ asset('Image/account-icon.png') }}" alt="Account Icon" class="auth-icon">
+        </a>
         @endif
+
     </div>
+    
 </header>

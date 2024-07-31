@@ -30,11 +30,17 @@ body {
     padding: 0 10px; 
 }
 
-.auth-link {
+/* .auth-btn {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     min-width: 120px; 
+} */
+
+.auth-icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.5rem;
 }
 
 .nav-link, .button {
@@ -43,13 +49,17 @@ body {
     background-color: #000000;
     color: white;
     border: none;
-    border-radius: 0.3125rem;
-    padding: 0.375rem 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;    
 }
 
 .nav-link:hover, .button:hover {
-    background-color: #0056b3;
+    background-color: #333;
 }
 
 .notification-bell {
@@ -88,17 +98,22 @@ body {
         justify-content: center; 
     }
     
-    .home-button-img, .center-content, .auth-link {
+    .home-button-img, .center-content, .auth-btn {
         width: auto; 
         text-align: center;
         justify-content: center;
         margin: 0 1rem; 
     }
     
-    .auth-link {
+    .auth-btn {
         order: 3; 
     }
 }
+
+
+
+
+
 
 /*? old code to keep  */
 /* header {
@@ -137,7 +152,7 @@ body {
     padding: 0 10px; 
 }
 
-.auth-link {
+.auth-btn {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -195,14 +210,14 @@ body {
         justify-content: center; 
     }
     
-    .home-button-img, .center-content, .auth-link {
+    .home-button-img, .center-content, .auth-btn {
         width: auto; 
         text-align: center;
         justify-content: center;
         margin: 0 1rem; 
     }
     
-    .auth-link {
+    .auth-btn {
         order: 3; 
     }
 } */
