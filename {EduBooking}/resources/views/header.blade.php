@@ -25,7 +25,7 @@
     <div class="btn-block">
 
         <div>
-            <a href="">Contact</a>
+            <a class="contact-btn" href="">Contact</a>
         </div>
 
         <div class="notification-block">

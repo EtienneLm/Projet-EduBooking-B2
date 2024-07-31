@@ -76,23 +76,25 @@ input[type="date"]:focus {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
-    background-color: #0056b3;
+    background-color: black;
     display: flex;
-    position: relative;
-    top: 5vh;
-    left: 2vw;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    top: 10rem; 
+    left: 5rem; 
+    cursor: pointer;
 }
-
 .arrow {
     width: 0.7rem;
     height: 0.7rem;
     border: solid white;
     border-width: 0 0.2rem 0.2rem 0;
     display: inline-block;
+    /* padding: ; */
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
-
 .return-btn-box .arrow {
     position: absolute;
     top: 50%;
@@ -100,9 +102,8 @@ input[type="date"]:focus {
     transform: translate(-50%, -50%) rotate(135deg);
     -webkit-transform: translate(-50%, -50%) rotate(135deg);
 }
-
 .return-btn-box:hover {
-    background-color: #2a84e4;
+    background-color: #333;
 }
 
 .center-content span {

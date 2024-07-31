@@ -1,51 +1,71 @@
-body {
-    font-family: 'Arial', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url('/Image/fond3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-color: #f5f5f5;
-    display: block; 
+    color: #000000;
+    font-size: calc(10px + 1vmin);
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; 
+    padding: 20px;
 }
 
 .whole-page {
-    position: relative;
-    width: 80%; 
-    max-width: 40rem;
-    margin: 20px auto; 
+    /* background-color: yellow; */
+    text-align: center;
+    max-width: 100%; 
 }
 
 h1 {
     color: #333;
-    text-align: center;
     margin-bottom: 20px;
 }
 
-h3 {
+.max-amount-txt {
     color: #ff0000;
-    text-align: center;
     margin-bottom: 20px;
 }
 
 .select-appointments {
     width: 100%;
-    padding: 0.625rem; 
-    font-size: calc(0.75rem + 0.5vmin); 
-    border-radius: 0.6vh;
+    padding: 0.625rem;
+    font-size: calc(0.65rem + 0.5vmin);
     border: 0.0625rem solid #ccc;
     margin-bottom: 1rem;
     background-color: white;
+
+    border-radius: 10rem;
 }
 
 .select-appointments:hover {
-    background-color: #e1f5fe;
+    background-color: #ecebeb;
 }
 
-.select-appointments:focus {
-    border-color: #0056b3;
+/* .select-appointments:focus {
+    border-color: #333;
     outline: none;
-}
+} */
 
 .go-create-btn {
-    text-decoration: none; 
+    text-decoration: none;
     text-align: center;
     margin-top: 20px;
     display: block;
@@ -53,33 +73,35 @@ h3 {
     padding: 10px;
     font-size: 1rem;
     color: white;
-    background-color: #0056b3;
+    background-color: #000000;
     border: none;
-    border-radius: 0.6vh;
+    border-radius: 10rem;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .go-create-btn:hover {
-    background-color: #2a84e4;
+    background-color: #333;
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    width: 100%; 
+    width: 100%;
 }
 
 .delete-btn {
     margin-top: 20px;
     display: block;
-    width: 50%; 
+    width: 50%;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     background-color: #de3131;
     border: none;
-    border-radius: 0.6vh;
     cursor: pointer;
+    border-radius: 10rem;
+    font-weight: 600;
 }
 
 .delete-btn:hover {
@@ -90,23 +112,25 @@ h3 {
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
-    background-color: #0056b3;
+    background-color: black;
     display: flex;
-    position: relative;
-    top: 5vh;
-    left: 2vw;
+    align-items: center;
+    justify-content: center;
+    position: fixed; 
+    top: 10rem; 
+    left: 5rem; 
+    cursor: pointer;
 }
-
 .arrow {
     width: 0.7rem;
     height: 0.7rem;
     border: solid white;
     border-width: 0 0.2rem 0.2rem 0;
     display: inline-block;
+    /* padding: ; */
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }
-
 .return-btn-box .arrow {
     position: absolute;
     top: 50%;
@@ -114,9 +138,8 @@ h3 {
     transform: translate(-50%, -50%) rotate(135deg);
     -webkit-transform: translate(-50%, -50%) rotate(135deg);
 }
-
 .return-btn-box:hover {
-    background-color: #2a84e4;
+    background-color: #333;
 }
 
 .deletion-message {

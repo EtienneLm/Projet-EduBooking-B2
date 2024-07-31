@@ -11,12 +11,19 @@ header {
     overflow: hidden; 
 }
 
+.contact-btn {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    margin-right: 5rem;
+}
+
 .btn-block {
     display: flex;
     align-items: center;
     gap: 1rem; 
     position: absolute;
-    right: 10rem;
+    right: 12rem;
     top: 3rem;
 }
 
@@ -126,7 +133,7 @@ header {
     width: 11ch;
     font-size: 2.5rem;
     border-right: 4px solid black;
-    margin: 2rem auto;
+    margin: 2rem 1rem auto;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(13, end), blink-caret 0.5s step-end infinite alternate;
