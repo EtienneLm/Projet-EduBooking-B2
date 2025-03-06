@@ -8,7 +8,7 @@
 
 EduBooking is an innovative online appointment scheduling platform designed to facilitate seamless interactions between students and teachers. This tool allows students to book appointments with their educators effortlessly, enhancing the educational experience by fostering easier and more direct communication.
 
-## Table of Contents
+## Table of Contentsoipmoilik
 
 - [Project Overview](#project-overview)
 - [Features](#features)
